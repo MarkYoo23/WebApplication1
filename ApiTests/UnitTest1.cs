@@ -30,5 +30,12 @@ namespace ApiTests
             var weatherForecasts = _weatherForecastController.Get();
             Assert.NotNull(weatherForecasts);
         }
+
+        [Fact]
+        public void FailTest1()
+        {
+            var weatherForecasts = _weatherForecastController.Get();
+            Assert.Empty(weatherForecasts);
+        }
     }
 }
